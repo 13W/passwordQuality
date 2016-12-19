@@ -1,0 +1,27 @@
+{
+  "name": "password-quality",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/*.test.js --reporter spec",
+    "build-js": "./node_modules/.bin/browserify index.js -o js/passwordQuality.js -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yarick333/passwordQuality.git"
+  },
+  "author": "Yaroslav Bezrukov",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "browserify": "~13.1.1",
+    "mocha": "2.3.3",
+    "assert": "1.3.0",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "latest"
+  },
+  "keywords": ["passwordQuality"]
+}
