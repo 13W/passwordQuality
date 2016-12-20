@@ -12,11 +12,11 @@ var QUALITY = ['Weak', 'Medium', 'Strong'];
 
 describe('passwordQuality', function () {
     QUALITY.forEach(function (quality) {
-        describe('password quality must be \'' + quality + '!\'', function () {
+        describe('password quality must be \'' + quality + '\'', function () {
             PASSWORDS[quality.toLowerCase()].forEach(function (password) {
                 it('Tested password \'' + password + '\'', function (done) {
-                    var currentQuality = passwordQuality(password);
-                    assert.strictEqual(currentQuality, quality + '!');
+                    var currentQuality = passwordQuality.checkQuality(password);
+                    assert.strictEqual(currentQuality, quality);
 
                     done();
                 })
