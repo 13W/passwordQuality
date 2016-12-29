@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(function (global) {
     function checkQuality(password) {
         if (password === undefined) {
             return;
@@ -54,7 +54,9 @@
 
     if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
         module.exports = passwordQuality;
-    } else {
+    } else if (window) {
         window.passwordQuality = passwordQuality;
+    } else {
+        global.passwordQuality = passwordQuality;
     }
-})();
+})(this);
