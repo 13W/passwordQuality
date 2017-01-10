@@ -1,6 +1,6 @@
 {
   "name": "password-quality",
-  "version": "0.1.42",
+  "version": "0.1.46",
   "description": "",
   "main": "index.js",
   "scripts": {
